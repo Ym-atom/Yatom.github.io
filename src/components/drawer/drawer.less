@@ -1,0 +1,160 @@
+.drawer-mask {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--mask-background);
+}
+.drawer {
+  background: #fff;
+  pointer-events: auto;
+  position: absolute;
+  &-top-line {
+    width: 100%;
+    height: var(--top-line-height);
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    position: relative;
+  }
+  &-title {
+    width: 100%;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &-close-icon-box {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  &-close-icon {
+    width: 30px;
+    height: 30px;
+  }
+  &-content {
+    padding: 20px;
+    height: calc(100% - var(--top-line-height));
+  }
+  &-custom-content {
+    height: 100%;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    line-height: 1.5;
+  }
+}
+.drawer-bottom {
+  width: 100%;
+  height: var(--drawer-default-wh);
+  inset: auto auto 0px;
+  max-height: 80vh; // 设置最大高度
+  &-appear {
+    animation: drawer-bottom-appear var(--animation-duration);
+  }
+  &-disappear {
+    animation: drawer-bottom-disappear var(--animation-duration);
+  }
+}
+.drawer-top {
+  width: 100%;
+  height: var(--drawer-default-wh);
+  inset: 0px auto auto;
+  max-height: 80vh; // 设置最大高度
+  &-appear {
+    animation: drawer-top-appear var(--animation-duration);
+  }
+  &-disappear {
+    animation: drawer-top-disappear var(--animation-duration);
+  }
+}
+.drawer-left {
+  width: var(--drawer-default-wh);
+  height: 100%;
+  inset: auto auto auto 0px;
+  max-width: 80vw; // 设置最大宽度
+  &-appear {
+    animation: drawer-left-appear var(--animation-duration);
+  }
+  &-disappear {
+    animation: drawer-left-disappear var(--animation-duration);
+  }
+}
+.drawer-right {
+  width: var(--drawer-default-wh);
+  height: 100%;
+  inset: auto 0px auto auto;
+  max-width: 80vw; // 设置最大宽度
+  &-appear {
+    animation: drawer-right-appear var(--animation-duration);
+  }
+  &-disappear {
+    animation: drawer-right-disappear var(--animation-duration);
+  }
+}
+@keyframes drawer-bottom-appear {
+  from {
+    bottom: calc(var(--drawer-default-wh) * -1);
+  }
+  to {
+    bottom: 0;
+  }
+}
+@keyframes drawer-bottom-disappear {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: calc(var(--drawer-default-wh) * -1);
+  }
+}
+@keyframes drawer-top-appear {
+  from {
+    top: calc(var(--drawer-default-wh) * -1);
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes drawer-top-disappear {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(var(--drawer-default-wh) * -1);
+  }
+}
+@keyframes drawer-left-appear {
+  from {
+    left: calc(var(--drawer-default-wh) * -1);
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes drawer-left-disappear {
+  from {
+    left: 0;
+  }
+  to {
+    left: calc(var(--drawer-default-wh) * -1);
+  }
+}
+@keyframes drawer-right-appear {
+  from {
+    right: calc(var(--drawer-default-wh) * -1);
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes drawer-right-disappear {
+  from {
+    right: 0;
+  }
+  to {
+    right: calc(var(--drawer-default-wh) * -1);
+  }
+}

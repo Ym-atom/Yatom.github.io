@@ -1,0 +1,40 @@
+.toast-mask {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toast {
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.7); // background-color 在安卓QQ老版本不生效
+  padding: 10px 20px;
+  max-width: 40vw; // 设置最大宽度
+  color: #fff; // 自定义 content 时也要默认字体颜色为白色
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+  &-text {
+    font-size: 14px;
+  }
+  &-icon-box {
+    margin: 6px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-icon {
+    width: 25px;
+    height: 25px;
+  }
+  &-with-icon-column {
+    padding: 10px 20px;
+  }
+  &-with-icon-row {
+    padding: 10px 20px;
+  }
+}

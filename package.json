@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "author": "ALKAOUA720 <65393954+ALKAOUA720@users.noreply.github.com>",
+  "scripts": {
+    "build": "cross-env umi build",
+    "dev": "cross-env PORT=2580 umi dev",
+    "postinstall": "umi setup",
+    "setup": "umi setup",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "callapp-lib": "^3.5.3",
+    "cross-env": "^7.0.3",
+    "umi": "^4.0.68",
+    "vconsole": "^3.15.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "typescript": "^5.0.3"
+  }
+}

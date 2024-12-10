@@ -1,0 +1,48 @@
+.message-mask {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 55px 0;
+  pointer-events: none; // 允许穿透点击蒙层
+}
+.message {
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.7); // background-color 在安卓QQ老版本不生效
+  padding: 10px 20px;
+  max-width: 40vw; // 设置最大宽度
+  color: #fff; // 自定义 content 时也要默认字体颜色为白色
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: message-move 300ms;
+  margin-bottom: 14px;
+  pointer-events: auto;
+  &-text {
+    font-size: 14px;
+  }
+  &-icon-box {
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+@keyframes message-move {
+  from {
+    opacity: 0.5;
+    transform: translate(0, -100%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
